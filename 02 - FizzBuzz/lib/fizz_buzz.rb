@@ -1,23 +1,18 @@
 class FizzBuzz
   def generally_fizzy(divisor_array, low, high)
-    # View README.md for instructions
     fizzy_hash = Hash.new
-    while low <= high do
+    (low..high).each do |cur|
     	fizz_count=0
-    	divisor_array.each { |num| 
-    		
-    			fizz_count+=1 if low%num==0
-
+    	divisor_array.each { |num| 	
+    		fizz_count+=1 if cur%num==0
     	}
     	if fizz_count==divisor_array.length
-    		fizzy_hash[low] = "reallyfizzy"
+    		fizzy_hash[cur] = "reallyfizzy"
     	elsif fizz_count >= 1
-    		fizzy_hash[low] = "fizzy"
+    		fizzy_hash[cur] = "fizzy"
     	else
-    		fizzy_hash[low] = ""
+    		fizzy_hash[cur] = ""
     	end
-    		
-    	low+=1
     end
     fizzy_hash.each { |num,fizz_value|
     	print "#{num} #{fizz_value}*\n"
