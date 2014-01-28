@@ -1,9 +1,7 @@
 class Array
+  #Traversal Only Answer
   def spiral
-    # View README.md for instructions
-    # Hint:
-    #  - Remember that since you'll be calling matrix.spiral, matrix would be self inside this method
-  	outer_array_num=0
+    outer_array_num=0
   	inner_array_num=0		
   	direction='r'			
   	total_element_num = total_elements(self)
@@ -11,7 +9,6 @@ class Array
   	layer=0
   	while(spiral_array.length < total_element_num)
   		spiral_array << self[outer_array_num][inner_array_num]
-  		#
   		if(direction.eql?('r') && inner_array_num<=self[outer_array_num].length-layer)
   			if(inner_array_num==self[outer_array_num].length-1-layer)
   				direction='d'
